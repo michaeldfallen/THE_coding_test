@@ -1,0 +1,61 @@
+{
+  "name": "the_coding_test",
+  "version": "1.0.0",
+  "description": "Michael Allens submission for the THE coding test",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaeldfallen/THE_coding_test.git"
+  },
+  "author": "Michael Allen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaeldfallen/THE_coding_test/issues"
+  },
+  "homepage": "https://github.com/michaeldfallen/THE_coding_test#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@types/jest": "^26.0.24",
+    "babel-jest": "^27.0.6",
+    "jest": "^27.0.6",
+    "prettier": "^2.3.2",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
+  "jest": {
+    "clearMocks": true
+  },
+  "tsconfig": {
+    "compilerOptions": {
+      "resolveJsonModule": true,
+      "target": "ES2021",
+      "module": "commonjs",
+      "lib": [
+        "ES2021"
+      ],
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true
+    }
+  },
+  "editorConfig": {
+
+  }
+}
