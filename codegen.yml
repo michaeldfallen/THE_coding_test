@@ -1,0 +1,12 @@
+overwrite: true
+schema: "src/apollo/schema.graphql"
+documents: null
+generates:
+  src/apollo/generated/graphql.ts:
+    config:
+      useIndexSignature: true
+      contextType: ../context#Context
+    plugins:
+      - "typescript"
+      - "typescript-resolvers"
+      - "typescript-document-nodes"

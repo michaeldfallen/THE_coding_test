@@ -1,0 +1,34 @@
+type Query {
+  institutions: [Institution]!
+  submissions: [Submission]!
+}
+
+type Institution {
+  id: ID!
+  name: String!
+  address: String!
+  country: String!
+  region: String!
+  submissions: [Submission]
+}
+
+type Submission {
+  id: ID!
+  institution_id: ID!
+  year: Int!
+  students_total: Int!
+  undergraduates_total: Int!
+  postgraduates_total: Int!
+  staff_total: Int!
+  academic_papers: Int!
+  institution_income: Int!
+  institution: Institution
+  subjects: [Subject]!
+}
+
+type Subject {
+  name: String!
+  academic_papers: Int!
+  students_total: Int!
+  student_rating: Float!
+}

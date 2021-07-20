@@ -13,3 +13,22 @@ describe("DummySubmissionService.listAll()", () => {
     expect(submissions).toBe(testData);
   });
 });
+
+describe("DummySubmissionService.getByInstitutionId()", () => {
+  it("returns only the requested submissions", async () => {
+    const service = new DummySubmissionsService();
+    const testData = await testDataPromise;
+    const institutionId = testData[0].institution_id;
+    const expected = testData.filter(
+      (sub) => sub.institution_id === institutionId
+    );
+    const submissions = await service.getByInstitutionId(institutionId);
+    expect(submissions).toHaveLength(expected.length);
+    expect(submissions).toEqual(expected);
+  });
+
+  it("returns [] for bad id", async () => {
+    const service = new DummySubmissionsService();
+    expect(service.getByInstitutionId("bad input")).resolves.toEqual([]);
+  });
+});
