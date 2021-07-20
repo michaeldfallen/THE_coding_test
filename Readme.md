@@ -66,3 +66,26 @@ link to get an interactive console to play with the data.
       }
   }
   ```
+
+## Comments
+
+The advice said "do one small, relatively simple thing". I figured, I spent all last year
+building GraphQL APIs so that'll be relatively simple thing to do. I forgot just how
+much is involved in the initial setup of a GraphQL API.
+
+As a result the actual API interface is significantly smaller and simpler than I expected
+I could get done in the time.
+
+Some queries I had thought would be interesting to write:
+
+```
+query {
+    # Where could I learn Chemistry?
+    institutionsBySubject(subject: 'Chemistry') { ... }
+
+    # Which institutions are we still waiting for reply from?
+    institutionsMissingSubmission(year: 2021) { ... }
+}
+```
+
+These would be pretty easy to implement but you have to draw the line somewhere.
